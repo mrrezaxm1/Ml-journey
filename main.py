@@ -17,6 +17,17 @@ def main():
   print("Mean (default):", df["salary"].mean())
   print("Mean dropna:",  df["salary"].dropna().mean())
   print("Mean fillna(0):",  df["salary"].fillna(0).mean())
+  high_salary = df[df["salary"] > 50000]
+  
+
+  print("High salary employees:")
+  print(high_salary)
+
+  print("Count high salary:",   high_salary.shape[0])
+  print("Mean high salary:", high_salary["salary"].mean())
+
+
+
 
 
 

@@ -24,7 +24,14 @@ def main():
   print(high_salary)
 
   print("Count high salary:",   high_salary.shape[0])
-  print("Mean high salary:", high_salary["salary"].mean())
+  print("Mean high salary:",
+ high_salary["salary"].mean())
+
+  df["level"] = ["junior", "mid", "senior", "senior"]
+
+  grouped = df.groupby("level")["salary"].mean()
+
+  print(grouped)
 
 
 
